@@ -18,7 +18,7 @@ class RandomStrGeneratorTest extends TestCase
 
     public function testRandomStrGenerator(): void
     {
-        $mokck = $this->generator->get(5);
+        $mokck = $this->generator->generate(5);
 
         $this->assertEquals($mokck, $mokck);
     }

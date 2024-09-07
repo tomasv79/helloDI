@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Generators;
 
-class RandomStrGenerator
+class RandomStrGenerator implements GeneratorInterface
 {
     private int $length = 5;
 
@@ -13,7 +13,7 @@ class RandomStrGenerator
         $this->length = $length;
     }
 
-    public function get(?int $length = null): string
+    public function generate(?int $length = null): string
     {
         $strlen = $length ?? $this->length;
 

@@ -2,30 +2,43 @@
 
 declare(strict_types=1);
 
+use App\Converters\ConverterInterface;
 use App\Converters\Rot13Converter;
 use App\Converters\SuperConverter;
-use App\Generators\RandomStrArrayGenerator;
+use App\Generators\GeneratorInterface;
+use App\Generators\CollectionGenerator;
 use App\Generators\RandomStrGenerator;
 
 $container = require_once __DIR__ . '/../config/bootstrap.php';
 
+/**
+ * @var $converters array<ConverterInterface>
+ */
+
+$converters = [
+    $container->get('super_converter'),
+    $container->get('rot_13_converter'),
+];
+
+$convertersLen = count($converters);
 
 /**
- * @var $rnd SuperConverter
+ * @var $collectionGenerator CollectionGenerator
  */
-$rnd = $container->get('super_converter');
-//$str = $rnd->convert('22aAcd');
-$str = $rnd->convert('abcdx');
-
-dump($str);
+$collectionGenerator = $container->get('collection_generator');
+$collection = $collectionGenerator->generateCollection();
 
 
-/**
- * @var $rnd Rot13Converter
- */
-$rnd = $container->get('rot_13_converter');
-$str = $rnd->convert('abcdx');
-dump($str, $rnd->convert($str));
+$convertedGenerators = [];
+foreach ($collection as $randomStr) {
+    $converterIndex = rand(0, $convertersLen - 1);
 
+    $convertedGenerators[] = [
+        'origin' => $randomStr,
+        'converted' => $converters[$converterIndex]->convert($randomStr),
+        'algo' => (string)$converters[$converterIndex],
+    ];
+}
 
-//echo $str;
+dump($convertedGenerators);
+

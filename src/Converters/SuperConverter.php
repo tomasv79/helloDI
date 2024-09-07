@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Converters;
 
-class SuperConverter implements ConverterInterface
+class SuperConverter extends AbstractConverter implements ConverterInterface
 {
     public function convert(string $input): string
     {
