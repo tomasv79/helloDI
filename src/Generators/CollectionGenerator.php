@@ -30,6 +30,7 @@ class CollectionGenerator
         for ($i = 0; $i < $this->arrayLength; $i++) {
             $array[] = $this->randomStrGenerator->generate($this->stringLength);
         }
+
         return $array;
     }
 }
