@@ -32,6 +32,11 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         array (
             'DeepCopy\\' => 9,
         ),
+        'A' => 
+        array (
+            'App\\Tests\\' => 10,
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -67,6 +72,18 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'App\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/../..' . '/src',
     );
 
     public static $classMap = array (
@@ -1243,6 +1260,7 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitc548601427b291932cfe7e3e056999cc::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitc548601427b291932cfe7e3e056999cc::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr0 = ComposerStaticInitc548601427b291932cfe7e3e056999cc::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInitc548601427b291932cfe7e3e056999cc::$classMap;
 
         }, null, ClassLoader::class);
