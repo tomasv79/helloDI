@@ -25,7 +25,7 @@ class CollectionGenerator
     }
 
     /**
-     * @return array <mixed>
+     * @return array<string>
      */
     public function generateCollection(): array
     {
