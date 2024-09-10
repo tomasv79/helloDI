@@ -18,8 +18,12 @@ class RandomStrGeneratorTest extends TestCase
 
     public function testRandomStrGenerator(): void
     {
-        $mokck = $this->generator->generate(5);
+        $length = 7;
+        $this->generator->setLength($length);
 
-        $this->assertEquals($mokck, $mokck);
+        $this->assertMatchesRegularExpression(
+            '/^[0-9a-zA-Z]{'.$length.'}$/',
+            $this->generator->generate()
+        );
     }
 }

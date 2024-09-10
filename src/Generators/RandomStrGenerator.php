@@ -8,6 +8,8 @@ class RandomStrGenerator implements GeneratorInterface
 {
     private int $length = 5;
 
+    private string $allowedSharacters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
     public function setLength(int $length): void
     {
         $this->length = $length;
@@ -17,10 +19,9 @@ class RandomStrGenerator implements GeneratorInterface
     {
         $strlen = $length ?? $this->length;
 
-        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $randomStr = '';
         for ($i = 0; $i < $strlen; $i++) {
-            $randomStr .= $characters[rand(0, strlen($characters) - 1)];
+            $randomStr .= $this->allowedSharacters[rand(0, strlen($this->allowedSharacters) - 1)];
         }
 
         return $randomStr;
