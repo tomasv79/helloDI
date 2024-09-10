@@ -10,7 +10,7 @@ class CollectionGenerator
     private int $stringLength = 2;
 
     public function __construct(
-        private GeneratorInterface $randomStrGenerator,
+        private GeneratorInterface $generator,
     ) {
     }
 
@@ -24,11 +24,14 @@ class CollectionGenerator
         $this->stringLength = $length;
     }
 
+    /**
+     * @return array <mixed>
+     */
     public function generateCollection(): array
     {
         $array = [];
         for ($i = 0; $i < $this->arrayLength; $i++) {
-            $array[] = $this->randomStrGenerator->generate($this->stringLength);
+            $array[] = $this->generator->generate($this->stringLength);
         }
 
         return $array;

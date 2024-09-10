@@ -3,11 +3,7 @@
 declare(strict_types=1);
 
 use App\Converters\ConverterInterface;
-use App\Converters\Rot13Converter;
-use App\Converters\SuperConverter;
-use App\Generators\GeneratorInterface;
 use App\Generators\CollectionGenerator;
-use App\Generators\RandomStrGenerator;
 
 $container = require_once __DIR__ . '/../config/bootstrap.php';
 
@@ -27,7 +23,6 @@ $convertersLen = count($converters);
  */
 $collectionGenerator = $container->get('collection_generator');
 $collection = $collectionGenerator->generateCollection();
-
 
 $convertedGenerators = [];
 foreach ($collection as $randomStr) {
