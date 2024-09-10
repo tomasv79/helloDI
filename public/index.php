@@ -36,4 +36,3 @@ foreach ($collection as $randomStr) {
 }
 
 dump($convertedGenerators);
-
