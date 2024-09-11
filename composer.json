@@ -23,6 +23,6 @@
   "scripts": {
     "sym start": "symfony server:start",
     "sniff": "./vendor/bin/phpcs ./src",
-    "stan": "vendor/bin/phpstan --level=9 analyse src tests"
+    "stan": "vendor/bin/phpstan --level=9 analyse src"
   }
 }

@@ -10,7 +10,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 class GeneratorsCollection
 {
     /**
-     * @return ArrayCollection<GeneratorInterface>
+     * @var $generators ArrayCollection<GeneratorInterface>
      */
     private ArrayCollection $generators;
 

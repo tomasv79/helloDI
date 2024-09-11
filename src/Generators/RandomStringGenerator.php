@@ -29,7 +29,9 @@ class RandomStringGenerator implements StringGeneratorInterface, GeneratorInterf
         return $this;
     }
 
-    //SRP fuckup?.. eh.. lazy bastard..
+    /**
+     * Violating SRP?.. eh.. lazy bastard..
+     */
     public function applyConverter(ConverterInterface $converter): void
     {
         $this->randomString = $converter->convert($this->randomString);

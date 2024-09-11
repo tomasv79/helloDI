@@ -18,14 +18,6 @@ $container->register('string_array_generator', StringArrayGenerator::class)
     ->addMethodCall('setArrayLength', [4])
     ->addMethodCall('setStringLength', [10]);
 
-
-
-
-
-
-
-
-
 $container->register('super_converter', SuperConverter::class);
 $container->register('rot_13_converter', Rot13Converter::class);
 

@@ -44,6 +44,9 @@ class StringArrayGenerator implements ArrayGeneratorInterface, GeneratorInterfac
         return $this;
     }
 
+    /**
+     * Violating SRP?.. eh.. lazy bastard..
+     */
     public function applyConverter(ConverterInterface $converter): void
     {
         foreach ($this->strArray as $key => $str) {

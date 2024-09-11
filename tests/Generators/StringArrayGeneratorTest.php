@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace App\Tests\Generators;
 
-use App\Generators\GeneratorInterface;
 use App\Generators\RandomStringGenerator;
 use App\Generators\StringArrayGenerator;
-use App\Generators\StringGeneratorInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
