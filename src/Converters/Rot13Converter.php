@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Converters;
 
-class Rot13Converter extends AbstractConverter implements ConverterInterface
+class Rot13Converter implements ConverterInterface
 {
     public function convert(string $input): string
     {

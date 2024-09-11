@@ -20,9 +20,4 @@ class SuperConverterTest extends TestCase
     {
         $this->assertEquals('1/1/20/5/26/20/0/1', $this->converter->convert('1Atezt0a'));
     }
-
-    public function testToString(): void
-    {
-        $this->assertEquals('App\Converters\SuperConverter', $this->converter->__toString());
-    }
 }

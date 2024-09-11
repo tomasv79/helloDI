@@ -44,6 +44,7 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         array (
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Deprecations\\' => 22,
+            'Doctrine\\Common\\Collections\\' => 28,
             'DeepCopy\\' => 9,
         ),
         'A' => 
@@ -57,8 +58,8 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -111,6 +112,10 @@ class ComposerStaticInitc548601427b291932cfe7e3e056999cc
         'Doctrine\\Deprecations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
+        ),
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/src',
         ),
         'DeepCopy\\' => 
         array (

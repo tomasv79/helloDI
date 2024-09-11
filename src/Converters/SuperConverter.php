@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Converters;
 
-class SuperConverter extends AbstractConverter implements ConverterInterface
+class SuperConverter implements ConverterInterface
 {
     //omg.. I didn't write this.. AI did!.. It's his fault!!!
     public function convert(string $input): string

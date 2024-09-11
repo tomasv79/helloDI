@@ -20,9 +20,4 @@ class Rot13ConverterTest extends TestCase
     {
         $this->assertEquals('nop', $this->converter->convert('abc'));
     }
-
-    public function testToString(): void
-    {
-        $this->assertEquals('App\Converters\Rot13Converter', $this->converter->__toString());
-    }
 }
